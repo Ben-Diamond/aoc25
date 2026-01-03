@@ -4,24 +4,6 @@ import numpy as np
 
 # a rectangle is invalid iff there is a point on one of its sides that's not greens
 
-#can a set contain a hundreds million things ?
-
-def binarySearch(arr, targetVal):
-    #stolen
-    left = 0
-    right = len(arr) - 1
-
-    while left <= right:
-        mid = (left + right) // 2
-
-        if arr[mid] == targetVal:
-            return mid
-
-        if arr[mid] < targetVal:
-            left = mid + 1
-        else:
-            right = mid - 1
-
 #for each side, we want a direction that points inside the shape - assume no overlap, so this is just the direction to neighbouring sides
 
 
@@ -209,7 +191,3 @@ for tile1 in reds:
             biggest = area
 
 print(biggest)
-
-#4657124992 is too high
-#1465735250 is too low
-#1465735250
